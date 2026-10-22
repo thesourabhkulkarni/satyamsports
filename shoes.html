@@ -1,0 +1,505 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Sports Shoes & Sneakers | Satyam Sports</title><style>
+  :root{
+    --maroon:#6d0f18;
+    --maroon-dark:#560c13;
+    --brown-logo:#7a1c07;
+    --gold:#c99a2e;
+    --gold-bright:#d4a017;
+    --orange:#f5821f;
+    --green:#22c55e;
+    --navy:#0f1b2d;
+    --navy-2:#13233a;
+    --ink:#1a1a1a;
+    --paper:#ffffff;
+    --line:#e7e2d8;
+    --muted:#6b6b6b;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Segoe UI',Arial,Helvetica,sans-serif;
+    color:var(--ink);
+    background:#faf9f6;
+  }
+  a{text-decoration:none;color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 20px;}
+
+  /* ============ HEADER (identical, unmodified) ============ */
+  header.site-header{background:#fff;border-bottom:1px solid var(--line);}
+  .top-bar{
+    background:#fff;
+    border-bottom:1px solid var(--line);
+    font-size:13px;
+    color:var(--maroon);
+    font-weight:700;
+  }
+  .top-bar .wrap{
+    display:flex;justify-content:space-between;align-items:center;
+    padding:8px 20px;flex-wrap:wrap;gap:8px;
+  }
+  .top-bar-left{display:flex;gap:22px;flex-wrap:wrap;align-items:center;}
+  .top-bar-left span{display:flex;align-items:center;gap:6px;white-space:nowrap;}
+  .top-bar-right{display:flex;gap:16px;align-items:center;color:var(--ink);font-weight:600;}
+  .top-bar-right .social{display:flex;gap:12px;color:var(--ink);}
+  .top-bar-right a{display:flex;align-items:center;gap:5px;}
+
+  .main-bar{padding:16px 20px;}
+  .main-bar .wrap{display:flex;align-items:center;gap:24px;flex-wrap:wrap;}
+  .logo-block{display:flex;align-items:center;gap:12px;}
+  .logo-block img{width:56px;height:56px;border-radius:6px;}
+  .logo-text h1{font-size:22px;color:var(--brown-logo);letter-spacing:.5px;}
+  .logo-text p{font-size:11px;color:var(--gold-bright);font-weight:700;letter-spacing:.3px;max-width:230px;line-height:1.3;}
+
+  .search-box{flex:1;min-width:220px;display:flex;max-width:560px;}
+  .search-box input{
+    flex:1;border:1px solid #d8d8d8;border-right:none;padding:12px 14px;
+    font-size:14px;border-radius:3px 0 0 3px;outline:none;
+  }
+  .search-box button{
+    background:var(--orange);border:none;color:#fff;padding:0 20px;
+    border-radius:0 3px 3px 0;cursor:pointer;font-size:16px;
+  }
+
+  .header-icons{display:flex;align-items:center;gap:22px;}
+  .icon-group{display:flex;align-items:center;gap:6px;font-size:13px;color:var(--ink);position:relative;}
+  .badge{
+    background:var(--orange);color:#fff;font-size:10px;font-weight:700;
+    border-radius:50%;width:16px;height:16px;display:flex;align-items:center;
+    justify-content:center;position:absolute;top:-8px;right:-8px;
+  }
+  .whatsapp-btn{
+    background:#25c95e;color:#fff;font-weight:700;font-size:13px;
+    padding:12px 18px;border-radius:4px;display:flex;align-items:center;gap:8px;
+    white-space:nowrap;
+  }
+
+  nav.main-nav{background:#fff;border-top:2px solid var(--ink);}
+  nav.main-nav .wrap{display:flex;align-items:center;justify-content:space-between;}
+  .nav-list{display:flex;flex-wrap:wrap;}
+  .nav-list li a{
+    display:block;padding:14px 16px;font-weight:800;font-size:13.5px;
+    letter-spacing:.3px;color:var(--ink);
+  }
+  .nav-list li a:hover{color:var(--maroon);}
+  .nav-list li a.active{color:var(--maroon);}
+  .hamburger{display:none;background:none;border:none;font-size:26px;padding:10px 20px;cursor:pointer;color:var(--ink);}
+
+  /* ============ FOOTER (identical, unmodified) ============ */
+  footer.site-footer{background:var(--navy);color:#cfd6e0;}
+  .newsletter-bar{
+    background:var(--maroon);border-top:3px solid var(--gold-bright);
+    padding:22px 0;
+  }
+  .newsletter-bar .wrap{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;
+  }
+  .newsletter-bar h3{color:#fff;font-size:19px;margin-bottom:4px;}
+  .newsletter-bar p{color:#f1d9d9;font-size:13px;}
+  .newsletter-form{display:flex;gap:0;flex:1;max-width:420px;min-width:260px;}
+  .newsletter-form input{
+    flex:1;border:none;padding:13px 16px;border-radius:4px 0 0 4px;font-size:14px;outline:none;
+  }
+  .newsletter-form button{
+    background:var(--gold-bright);color:var(--ink);border:none;font-weight:800;
+    padding:0 22px;border-radius:0 4px 4px 0;cursor:pointer;white-space:nowrap;
+  }
+
+  .footer-main{padding:44px 0 30px;}
+  .footer-grid{
+    display:grid;grid-template-columns:1.6fr 1fr 1fr 1.3fr;gap:32px;
+  }
+  .footer-col h2{color:#fff;font-size:15px;letter-spacing:.5px;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--gold-bright);display:inline-block;}
+  .footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:14px;}
+  .footer-brand img{width:44px;height:44px;border-radius:6px;}
+  .footer-brand h3{color:#fff;font-size:17px;}
+  .footer-brand span{color:var(--gold-bright);font-size:10.5px;font-weight:700;}
+  .footer-col p{font-size:13px;line-height:1.7;color:#aeb7c4;margin-bottom:16px;}
+  .footer-social{display:flex;gap:10px;}
+  .footer-social a{
+    width:32px;height:32px;border-radius:50%;background:#1c2c44;display:flex;
+    align-items:center;justify-content:center;color:#fff;font-size:13px;
+  }
+  .footer-col ul li{margin-bottom:10px;font-size:13.5px;}
+  .footer-col ul li a{color:#c3cbd8;display:flex;align-items:center;gap:6px;}
+  .footer-col ul li a:hover{color:var(--gold-bright);}
+  .tag-new{background:var(--maroon);color:#fff;font-size:9px;font-weight:800;padding:1px 6px;border-radius:2px;margin-left:4px;}
+  .contact-list li{display:flex;gap:10px;font-size:13.5px;color:#c3cbd8;margin-bottom:14px;align-items:flex-start;}
+  .store-hours{font-size:13px;color:#c3cbd8;border-top:1px solid #24344c;padding-top:14px;margin-top:6px;}
+  .store-hours b{color:#fff;}
+
+  .footer-bottom{border-top:1px solid #1e2e46;padding:18px 0;}
+  .footer-bottom .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:#8894a6;}
+  .footer-bottom a{color:var(--gold-bright);}
+  .made-by{font-weight:800;color:#c3cbd8;letter-spacing:.3px;}
+
+  @media (max-width:900px){
+    .footer-grid{grid-template-columns:1fr 1fr;}
+  }
+  @media (max-width:600px){
+    .footer-grid{grid-template-columns:1fr;gap:28px;}
+    .newsletter-bar .wrap{flex-direction:column;align-items:flex-start;}
+    .top-bar-left{gap:12px;}
+  }
+
+  /* ============ RESPONSIVE HEADER ============ */
+  @media (max-width:960px){
+    .top-bar{display:none;}
+    .header-icons .icon-group span.label{display:none;}
+    .whatsapp-btn span.label{display:none;}
+    .whatsapp-btn{padding:12px;}
+    nav.main-nav .nav-list{
+      display:none;flex-direction:column;width:100%;
+      background:#fff;position:absolute;left:0;right:0;top:100%;
+      border-top:1px solid var(--line);z-index:50;
+    }
+    nav.main-nav .nav-list.open{display:flex;}
+    nav.main-nav{position:relative;}
+    .hamburger{display:block;}
+    .nav-list li a{padding:14px 20px;border-bottom:1px solid var(--line);}
+  }
+  @media (max-width:600px){
+    .main-bar .wrap{gap:12px;}
+    .logo-text p{display:none;}
+    .search-box{order:3;flex-basis:100%;max-width:100%;}
+    .header-icons{gap:14px;}
+  }
+
+  
+/* ===== PRODUCT PAGE (rebuilt) ===== */
+.search-clear,.search-suggest{display:none}.search-box{position:relative}
+.breadcrumb{font-size:12.5px;color:var(--muted);padding:12px 0}.breadcrumb a{color:var(--maroon);font-weight:700}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;background:var(--maroon);color:#fff;border-radius:14px;padding:28px;margin-bottom:18px;overflow:hidden}
+.hero h2{font-size:clamp(26px,5vw,42px);line-height:1.1;margin-bottom:10px}.hero p{color:#f0dede;font-size:14.5px;line-height:1.6;max-width:480px;margin-bottom:16px}
+.hero .cta{display:inline-flex;gap:8px;align-items:center;background:#25c95e;color:#fff;font-weight:800;padding:12px 18px;border-radius:8px;font-size:14px}
+.hero-imgs{display:flex;gap:10px;justify-content:flex-end}.hero-imgs img{width:32%;max-width:150px;aspect-ratio:3/4;object-fit:cover;object-position:top;border-radius:10px;border:2px solid rgba(255,255,255,.25)}
+.quick{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:2px 2px 12px;margin:0 -20px;padding-inline:20px;scrollbar-width:none}.quick::-webkit-scrollbar{display:none}
+.qtile{flex:0 0 auto;scroll-snap-align:start;display:flex;align-items:center;gap:10px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px 14px 8px 8px;font-weight:800;font-size:13px;cursor:pointer;color:var(--ink)}
+.qtile img{width:44px;height:44px;border-radius:8px;object-fit:cover;object-position:top}.qtile.active{border-color:var(--maroon);box-shadow:inset 0 0 0 1px var(--maroon);color:var(--maroon)}
+.toolbar{position:sticky;top:0;z-index:40;background:#faf9f6;padding:8px 0;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.toolbar .count{font-size:13px;color:var(--muted);font-weight:700;margin-right:auto}
+.btn-o{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);padding:10px 14px;border-radius:8px;font-weight:700;font-size:13px;cursor:pointer}
+.layout{display:grid;grid-template-columns:260px 1fr;gap:26px;padding:10px 0 50px;align-items:start}
+.filters{background:#fff;border:1px solid var(--line);border-radius:12px;padding:18px;position:sticky;top:60px}
+.filters h3{font-size:15px;color:var(--maroon);margin-bottom:14px}.fg{margin-bottom:20px}.fg h4{font-size:13px;margin-bottom:10px}
+.pills{display:flex;flex-wrap:wrap;gap:7px}.pill{font-size:12.5px;font-weight:700;padding:7px 12px;border-radius:20px;border:1px solid var(--line);background:#fff;cursor:pointer}
+.pill.on{background:var(--maroon);border-color:var(--maroon);color:#fff}
+.range{position:relative;height:28px}.range input{position:absolute;inset:0;width:100%;pointer-events:none;-webkit-appearance:none;background:none;accent-color:var(--maroon);margin:0}
+.range input::-webkit-slider-thumb{pointer-events:auto;width:22px;height:22px}.range input::-moz-range-thumb{pointer-events:auto;width:22px;height:22px}
+.rlabel{display:flex;justify-content:space-between;font-weight:800;font-size:13px;color:var(--maroon);margin-bottom:6px}
+.fclose{display:none}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.card .im{aspect-ratio:4/5;background:#f3efe6;cursor:zoom-in;border:0;padding:0;display:block;width:100%}.card .im img{width:100%;height:100%;object-fit:cover;object-position:top}
+.card .in{padding:12px;display:flex;flex-direction:column;gap:4px;flex:1}.card .b{font-size:11px;font-weight:800;color:var(--gold);letter-spacing:.5px}
+.card .n{font-size:14px;font-weight:700;line-height:1.35;flex:1}
+.wa{display:flex;gap:8px;margin-top:10px}.wa a{flex:1;text-align:center;font-size:12.5px;font-weight:800;padding:10px 6px;border-radius:8px}
+.wa .e{background:#25c95e;color:#fff}.wa .p{border:1.5px solid var(--maroon);color:var(--maroon)}
+.empty{grid-column:1/-1;text-align:center;padding:50px 10px;color:var(--muted)}
+dialog{border:0;border-radius:16px;padding:0;width:min(92vw,520px);max-height:90vh;overflow:auto}dialog::backdrop{background:rgba(0,0,0,.55)}
+dialog img{width:100%;max-height:60vh;object-fit:contain;background:#f3efe6}.dbody{padding:16px}.dbody h3{margin:2px 0 4px}
+.dx{position:absolute;right:10px;top:10px;width:36px;height:36px;border-radius:50%;border:0;background:#fff;font-size:18px;cursor:pointer}
+.fab{position:fixed;right:16px;bottom:16px;z-index:60;width:56px;height:56px;border-radius:50%;background:#25c95e;color:#fff;display:flex;align-items:center;justify-content:center;font-size:26px;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.scrim{display:none;position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:150}.scrim.open{display:block}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding:22px 18px}.hero-imgs{justify-content:flex-start}
+.layout{grid-template-columns:1fr}.filters{position:fixed;left:0;right:0;bottom:0;top:auto;max-height:82vh;overflow:auto;z-index:200;border-radius:18px 18px 0 0;transform:translateY(105%);transition:transform .25s}
+.filters.open{transform:none}.fclose{display:block;float:right;background:none;border:0;font-size:22px}}
+@media(min-width:861px){.ftoggle{display:none}}
+@media(max-width:520px){.grid{grid-template-columns:1fr 1fr;gap:10px}.card .in{padding:10px}.card .n{font-size:13px}.wa{flex-direction:column;gap:6px;margin-top:8px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+/* ===== SHOES PAGE OVERRIDES ===== */
+:focus-visible{outline:2px solid var(--orange);outline-offset:2px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.hero{display:block;padding:0;background:var(--maroon);border-radius:14px;overflow:hidden}
+.hero-banner{width:100%;height:auto;aspect-ratio:1093/300;object-fit:cover;background:#0f1b2d}
+.hero-text{padding:20px 22px 22px;display:flex;gap:18px;align-items:center;justify-content:space-between}
+.hero-text h2{font-size:clamp(22px,4.6vw,34px);line-height:1.15;margin-bottom:8px}
+.hero-text p{color:#f0dede;font-size:14.5px;line-height:1.6;max-width:640px;margin:0}
+.hero .cta{flex:0 0 auto}
+.qtile img{object-fit:contain;object-position:center;background:#f4f2ec}
+.toolbar{gap:8px}.sortw select{appearance:auto;padding:10px 12px;min-height:40px}
+.card{transition:box-shadow .2s}.card:hover{box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.card .im{aspect-ratio:1/1;background:#f4f2ec;display:flex;align-items:center;justify-content:center}
+.card .im img{object-fit:contain;object-position:center;padding:6px;mix-blend-mode:multiply}
+.card .m{font-size:11.5px;color:var(--muted);font-weight:600}
+.card .n{flex:0 0 auto;min-height:2.7em}
+.card .in{gap:3px}.card .wa{margin-top:auto;padding-top:10px}
+.wa a{min-height:44px;display:flex;align-items:center;justify-content:center}
+.apply{display:none}
+dialog{width:min(94vw,560px)}
+dialog[open]{animation:sheet .22s ease-out}
+@keyframes sheet{from{transform:translateY(24px);opacity:.4}to{transform:none;opacity:1}}
+.dimg{position:relative;background:#f4f2ec}
+.dimg img{max-height:52vh;aspect-ratio:1/1;object-fit:contain;padding:10px;mix-blend-mode:multiply}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:0;background:rgba(255,255,255,.92);font-size:26px;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.nav.prev{left:8px}.nav.next{right:8px}
+.dmeta{font-size:13px;color:var(--muted);font-weight:700;margin-bottom:8px}
+.ddesc{font-size:14px;line-height:1.55;color:#333;margin-bottom:6px}
+.dbody .wa{margin-top:14px}
+@media(max-width:860px){
+.hero-text{flex-direction:column;align-items:flex-start;padding:16px 16px 18px}
+.hero-banner{aspect-ratio:2/1;object-position:72% 50%}
+.apply{display:flex;width:100%;justify-content:center;margin-top:10px;background:var(--maroon);color:#fff;border-color:var(--maroon)}
+.toolbar{padding:8px 0}.toolbar .count{flex:1 1 100%;order:-1;margin:0}
+.sortw{flex:1}.sortw select{width:100%}
+.ftoggle{flex:1;justify-content:center;min-height:40px}
+.pill{padding:10px 14px}
+.fab{bottom:14px;right:14px}
+body{padding-bottom:0}
+}
+@media(max-width:600px){
+.wrap{padding:0 14px}.quick{margin:0 -14px;padding-inline:14px}
+dialog{width:100%;max-width:100%;margin:auto 0 0;border-radius:18px 18px 0 0;max-height:92vh}
+.dimg img{max-height:46vh}
+.dbody{padding:14px 16px 20px}
+.dbody .wa{flex-direction:row}
+}
+@media(max-width:520px){
+.grid{gap:10px}
+.card .im img{padding:4px}
+.card .n{font-size:13px}
+.card .m{font-size:11px}
+.wa a{font-size:12.5px}
+}
+@media(prefers-reduced-motion:reduce){dialog[open]{animation:none}}
+</style></head><body>
+<!-- ============ HEADER (identical / unmodified across all pages) ============ -->
+<header class="site-header">
+  <div class="top-bar">
+    <div class="wrap">
+      <div class="top-bar-left">
+        <span>📍 SHOP NO. 17 PARK CHOWK, SOLAPUR 413001</span>
+        <span>📞 9423325141</span>
+        <span>✉️ info.satyamsports@gmail.com</span>
+        <span>💬 satyamsports</span>
+      </div>
+      <div class="top-bar-right">
+        <div class="social">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter/X">✕</a>
+          <a href="#" aria-label="Pinterest">P</a>
+          <a href="#" aria-label="Dribbble">◐</a>
+          <a href="#" aria-label="Instagram">◻</a>
+          <a href="#" aria-label="Flickr">◆</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+        </div>
+        <a href="#">👤 My Account</a>
+        <a href="#">🔒 Login</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="main-bar">
+    <div class="wrap">
+      <a href="index.html" class="logo-block">
+        <img src="logo.png" alt="Satyam Sports Logo">
+        <div class="logo-text">
+          <h1>SATYAM SPORTS</h1>
+          <p>YOUR TRUSTED SPORT PARTNER IN SOLAPUR</p>
+        </div>
+      </a>
+
+      <form class="search-box" id="siteSearchForm" role="search" autocomplete="off">
+        <input type="text" id="siteSearchInput" placeholder="Search products...">
+        <button type="button" class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+        <button type="submit" aria-label="Search">🔍</button>
+        <div class="search-suggest" id="searchSuggest"></div>
+      </form>
+
+      <div class="header-icons">
+        <div class="icon-group">
+          <span style="position:relative;">♡<span class="badge">0</span></span>
+          <span class="label">Wishlist</span>
+        </div>
+        <div class="icon-group">
+          <span style="position:relative;">🛒<span class="badge">0</span></span>
+          <span class="label">Total<br>$0.00</span>
+        </div>
+        <a href="#" class="whatsapp-btn">💬 <span class="label">WhatsApp Order</span></a>
+      </div>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <div class="wrap">
+      <ul class="nav-list" id="navList">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="cricket-cricket.html">CRICKET</a></li>
+        <li><a href="footeball.html">FOOTBALL</a></li>
+        <li><a href="badminton.html">BADMINTON</a></li>
+        <li><a href="tennis.html">TENNIS</a></li>
+        <li><a href="basketball.html">BASKETBALL</a></li>
+        <li><a href="carrom.html">CARROM & CHESS</a></li>
+        <li><a href="sports_accessories.html">SPORTS ACCESSORIES</a></li>
+        <li><a href="shop.html">SHOP</a></li>
+        <li><a href="contact_us.html">CONTACT US</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+
+<main class="wrap">
+<div class="breadcrumb"><a href="index.html">Home</a> &nbsp;/&nbsp; Sports Shoes &amp; Sneakers</div>
+<section class="hero">
+<img class="hero-banner" src="assets/images/banner.jpg" alt="Sports shoes and sneakers from DSC, Nivia, Abros, Sega and SG" width="1093" height="300">
+<div class="hero-text"><div><h2>Sports shoes &amp; sneakers from ₹200 to ₹10,000</h2>
+<p>Running, football, cricket, basketball and everyday sneakers from Abros, Nivia, Sega, DSC, SG, Nike, Adidas, Under Armour and Fila. Tap Ask Price on any pair and we reply on WhatsApp.</p></div>
+<a class="cta wa-link" data-msg="Hi Satyam Sports, I want to enquire about sports shoes and sneakers.">💬 Enquire on WhatsApp</a></div>
+</section>
+<div class="quick" id="quick"></div>
+<div class="toolbar"><span class="count" id="count"></span>
+<label class="sortw"><span class="sr">Sort by</span><select id="sort" class="btn-o"><option value="feat">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></label>
+<button class="btn-o ftoggle" id="ft">⚙ Filters</button></div>
+<div class="layout">
+<aside class="filters" id="filters"><button class="fclose" id="fx" aria-label="Close filters">✕</button><h3>Filter shoes &amp; sneakers</h3>
+<div class="fg"><h4>Price range</h4><div class="rlabel"><span id="lo"></span><span id="hi"></span></div>
+<div class="range"><input type="range" id="rmin" min="200" max="10000" step="100" value="200" aria-label="Minimum price"><input type="range" id="rmax" min="200" max="10000" step="100" value="10000" aria-label="Maximum price"></div></div>
+<div class="fg"><h4>Brand</h4><div class="pills" id="brands"></div></div>
+<button class="btn-o" id="reset" style="width:100%;justify-content:center">Clear all filters</button>
+<button class="btn-o apply" id="apply">Show results</button></aside>
+<section><div class="grid" id="grid"></div></section></div></main>
+<a class="fab wa-link" data-msg="Hi Satyam Sports, I want to enquire about sports shoes and sneakers." aria-label="Chat on WhatsApp">💬</a>
+<dialog id="dlg"><button class="dx" id="dx" aria-label="Close">✕</button>
+<div class="dimg"><button class="nav prev" id="dprev" aria-label="Previous product">‹</button><img id="di" alt=""><button class="nav next" id="dnext" aria-label="Next product">›</button></div>
+<div class="dbody"><div class="b" id="db"></div><h3 id="dn"></h3><p class="dmeta" id="dm"></p><p class="ddesc" id="dd"></p><div class="wa" id="dw"></div></div></dialog>
+<div class="scrim" id="scrim"></div>
+<!-- ============ FOOTER (identical / unmodified across all pages) ============ -->
+<footer class="site-footer">
+  <div class="newsletter-bar">
+    <div class="wrap">
+      <div>
+        <h3>Get Game-Day Offers First</h3>
+        <p>Subscribe and we'll email new arrivals & deals to your inbox.</p>
+      </div>
+      <form class="newsletter-form">
+        <input type="email" placeholder="Enter your email address">
+        <button type="submit">Subscribe</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="footer-main">
+    <div class="wrap footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Satyam Sports Logo">
+          <div>
+            <h3>SATYAM SPORTS</h3>
+            <span>YOUR TRUSTED SPORT PARTNER IN SOLAPUR</span>
+          </div>
+        </div>
+        <p>From cricket bats to badminton rackets, sneakers to carrom boards — Satyam Sports has been Solapur's go-to sports store, kitting out local players, schools and clubs with quality gear and honest advice.</p>
+        <div class="footer-social">
+          <a href="#">f</a>
+          <a href="#">✕</a>
+          <a href="#">P</a>
+          <a href="#">IG</a>
+          <a href="#">in</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h2>PRODUCTS</h2>
+        <ul>
+          <li><a href="cricket-cricket.html">› Cricket</a></li>
+          <li><a href="footeball.html">› Football</a></li>
+          <li><a href="badminton.html">› Badminton</a></li>
+          <li><a href="tennis.html">› Tennis</a></li>
+          <li><a href="basketball.html">› Basketball</a></li>
+          <li><a href="shoes.html">› Sports Shoes & Sneakers <span class="tag-new">NEW</span></a></li>
+          <li><a href="carrom.html">› Carrom & Chess</a></li>
+          <li><a href="sports_accessories.html">› Sports Accessories</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2>QUICK LINKS</h2>
+        <ul>
+          <li><a href="index.html">› Home</a></li>
+          <li><a href="shop.html">› Shop</a></li>
+          <li><a href="#">› My Account</a></li>
+          <li><a href="#">› Cart</a></li>
+          <li><a href="#">› Wishlist</a></li>
+          <li><a href="#">› Login</a></li>
+          <li><a href="contact_us.html">› Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2>CONTACT US</h2>
+        <ul class="contact-list">
+          <li>📍 <span>Shop No. 17, Park Chowk, Solapur 413001</span></li>
+          <li>📞 <span>9423325141</span></li>
+          <li>✉️ <span>info.satyamsports@gmail.com</span></li>
+          <li>💬 <span>Order on WhatsApp</span></li>
+        </ul>
+        <div class="store-hours"><b>Store Hours:</b> Mon – Sat, 10:00 AM – 9:00 PM</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© 2026 Satyam Sports, Solapur. All rights reserved.</span>
+      <span class="made-by">MADE BY SKEAS GLOBAL</span>
+      <span>Questions? Write to <a href="mailto:info.satyamsports@gmail.com">info.satyamsports@gmail.com</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+const WA='919423325141',$=id=>document.getElementById(id);
+// [brand, name, category, image, price (for filter), keywords, type label, description]
+const P=[
+["Abros","Abros Chance Running Shoes (ASSG1652)","running","abros-chance.jpg",1119,"abros running mesh off white grey","Running · Men","Lightweight breathable mesh upper in off-white and light grey with a cushioned white sole."],
+["Abros","Abros Phoenix Running Shoes (ASSG-1194)","running","abros-phoenix.jpg",1499,"abros running teal navy fizz foam","Running · Men","Teal and navy knit upper with Fizz Foam cushioning. Sizes 6 to 10."],
+["Sega","Sega Comfort Running Shoes","running","sega-comfort.jpg",890,"sega running comfort red","Running · Men","Full PU and mesh upper with a rubber outsole and Phylon midsole for comfort and grip. Sizes 5 to 11."],
+["Nivia","Nivia Running Shoes (White/Silver)","running","nivia-running.jpg",1299,"nivia running gym white silver","Running · Gym","Breathable white mesh with silver overlays for daily running and gym use."],
+["Nike","Nike Zoom Running Shoes (Red)","running","nike-zoom.jpg",8995,"nike zoom running red","Running · Performance","Knit upper with responsive cushioning and a high-traction outsole."],
+["Fila","Fila Air Cushion Sneakers (White)","casual","fila-air.jpg",2499,"fila air cushion white sneakers casual","Sneakers · Casual","Soft knit upper with a visible air cushion sole for all-day wear."],
+["Sport Fashion","Sport Fashion White-Red Sneakers","casual","sport-fashion.jpg",699,"fashion sport white red sneakers casual","Sneakers · Casual","Trendy white and red lace-up sneakers with a chunky sole."],
+["Adidas","Adidas Terrex Mid Trekking Shoes","trekking","adidas-terrex.jpg",6999,"adidas terrex trekking hiking high top","Trekking · Mid-top","Mid-top shoes with a grippy lugged outsole and padded ankle for trails."],
+["Under Armour","Under Armour Lockdown 7 Basketball Shoes","basketball","under-armour-lockdown.jpg",5999,"under armour lockdown basketball red black","Basketball · Court","Low-cut court shoes in red and black with a patterned outsole for grip."],
+["Sega","Sega Metallic Leather Football Studs","football","sega-metallic.jpg",1110,"sega football studs leather blue","Football studs","Lightweight genuine leather upper with double-moulded TPU studs. Sizes 5 to 11."],
+["Sega","Sega Classic Football Studs","football","sega-classic.jpg",875,"sega football studs orange classic","Football studs","Embossed PVC leather upper with a sturdy TPU sole for all grounds. Sizes 5 to 10."],
+["Nivia","Nivia Encounter Football Studs","football","nivia-encounter.jpg",1099,"nivia encounter football studs orange","Football studs","Bright orange studs with a textured upper and moulded studs."],
+["Nivia","Nivia Football Studs (Mint Green)","football","nivia-studs.jpg",1199,"nivia football studs green","Football studs","Mint green boots with blue studs for firm ground."],
+["DSC","DSC Belter Cricket Shoes","cricket","dsc-belter.jpg",1999,"dsc belter cricket rubber spikes teal","Cricket shoes","White upper with a teal rubber-stud sole for grip on the pitch."],
+["SG","SG Greenlands Cricket Shoes","cricket","sg-greenlands.jpg",1799,"sg greenlands cricket white","Cricket shoes","White cricket shoes with lime accents and a grippy black sole."]
+];
+const CATS=[['all','All shoes'],['running','Running'],['football','Football studs'],['cricket','Cricket'],['casual','Sneakers'],['basketball','Basketball'],['trekking','Trekking']];
+const BR=['Abros','Nivia','Sega','DSC','SG','Nike','Adidas','Under Armour','Fila','Sport Fashion'];
+const MAX=10000,H='assets/shoes/';let cat='all',brand=null,cur=[],ci=0;
+const link=(t,n)=>'https://wa.me/'+WA+'?text='+encodeURIComponent(t+' '+n);
+document.querySelectorAll('.wa-link').forEach(a=>a.href=link(a.dataset.msg,''));
+document.querySelectorAll('.whatsapp-btn').forEach(a=>a.href=link('Hi Satyam Sports, I want to order sports shoes and sneakers.',''));
+$('hamburger').onclick=()=>$('navList').classList.toggle('open');
+const fmt=n=>'₹'+n.toLocaleString('en-IN');
+const btns=p=>`<a class="e" target="_blank" rel="noopener" href="${link('Hi Satyam Sports, I want to enquire about:',p[1])}">Enquire Now</a><a class="p" target="_blank" rel="noopener" href="${link('Hi Satyam Sports, please share the price of:',p[1])}">Ask Price</a>`;
+$('quick').innerHTML=CATS.map(c=>{const p=P.find(x=>c[0]=='all'||x[2]==c[0]);return `<button class="qtile" data-c="${c[0]}"><img src="${H+p[3]}" alt="">${c[1]}</button>`}).join('');
+$('brands').innerHTML=BR.map(b=>`<button class="pill" data-b="${b}">${b}</button>`).join('');
+function draw(){let lo=+$('rmin').value,hi=+$('rmax').value;if(lo>hi)[lo,hi]=[hi,lo];
+$('lo').textContent=fmt(lo);$('hi').textContent=fmt(hi)+(hi>=MAX?'+':'');
+const q=$('siteSearchInput').value.trim().toLowerCase(),s=$('sort').value;
+let L=P.filter(p=>(cat=='all'||p[2]==cat)&&(!brand||p[0]==brand)&&p[4]>=lo&&p[4]<=hi&&(!q||(p[0]+' '+p[1]+' '+p[5]+' '+p[6]).toLowerCase().includes(q)));
+if(s=='low')L.sort((a,b)=>a[4]-b[4]);if(s=='high')L.sort((a,b)=>b[4]-a[4]);
+cur=L;$('count').textContent=L.length+(L.length==1?' pair':' pairs');$('apply').textContent='Show '+L.length+(L.length==1?' pair':' pairs');
+$('grid').innerHTML=L.length?L.map((p,i)=>`<article class="card"><button class="im" data-i="${i}" aria-label="View ${p[1]}"><img src="${H+p[3]}" alt="${p[1]}" loading="lazy"></button><div class="in"><span class="b">${p[0].toUpperCase()}</span><span class="n">${p[1]}</span><span class="m">${p[6]}</span><div class="wa">${btns(p)}</div></div></article>`).join(''):'<div class="empty"><h3>No shoes match</h3><p>Widen the price range or clear filters.</p></div>';
+document.querySelectorAll('.qtile').forEach(t=>t.classList.toggle('active',t.dataset.c==cat));
+document.querySelectorAll('.pill').forEach(t=>t.classList.toggle('on',t.dataset.b==brand))}
+function show(i){ci=(i+cur.length)%cur.length;const p=cur[ci];$('di').src=H+p[3];$('di').alt=p[1];$('db').textContent=p[0].toUpperCase();$('dn').textContent=p[1];$('dm').textContent=p[6];$('dd').textContent=p[7];$('dw').innerHTML=btns(p);$('dprev').style.display=$('dnext').style.display=cur.length>1?'':'none'}
+$('quick').onclick=e=>{const t=e.target.closest('.qtile');if(t){cat=t.dataset.c;draw()}};
+$('brands').onclick=e=>{const t=e.target.closest('.pill');if(t){brand=brand==t.dataset.b?null:t.dataset.b;draw()}};
+$('grid').onclick=e=>{const t=e.target.closest('.im');if(!t)return;show(+t.dataset.i);$('dlg').showModal()};
+$('dprev').onclick=()=>show(ci-1);$('dnext').onclick=()=>show(ci+1);
+$('dlg').addEventListener('keydown',e=>{if(e.key=='ArrowLeft')show(ci-1);if(e.key=='ArrowRight')show(ci+1)});
+$('dx').onclick=()=>$('dlg').close();$('dlg').onclick=e=>{if(e.target==$('dlg'))$('dlg').close()};
+['rmin','rmax','siteSearchInput','sort'].forEach(i=>$(i).oninput=draw);
+$('siteSearchForm').onsubmit=e=>{e.preventDefault();draw()};
+$('reset').onclick=()=>{cat='all';brand=null;$('rmin').value=200;$('rmax').value=MAX;$('siteSearchInput').value='';$('sort').value='feat';draw()};
+const fo=o=>{$('filters').classList.toggle('open',o);$('scrim').classList.toggle('open',o)};
+$('ft').onclick=()=>fo(1);$('fx').onclick=$('scrim').onclick=$('apply').onclick=()=>fo(0);draw();
+</script></body></html>
